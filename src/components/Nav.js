@@ -1,7 +1,17 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import "../styles/nav.sass";
 
-const Nav = ({ active, click }) => {
+const Nav = ({ active, click, sections }) => {
+  const links = sections.map(section => {
+    return (
+      <NavLink to={section.path} exact key={section.id}>
+        <button onClick={click} className={`menu-btn btn-${section.id}`}>
+          {section.name}
+        </button>
+      </NavLink>
+    );
+  });
   return (
     <>
       <button
@@ -12,7 +22,7 @@ const Nav = ({ active, click }) => {
         <span className="span-2" />
         <span className="span-3" />
       </button>
-      <nav className={active ? "nav active" : "nav"} />
+      <nav className={active ? "nav active" : "nav"}>{links}</nav>
     </>
   );
 };
