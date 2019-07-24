@@ -5,7 +5,13 @@ import "../styles/nav.sass";
 const Nav = ({ active, click, sections }) => {
   const links = sections.map(section => {
     return (
-      <NavLink to={section.path} exact key={section.id}>
+      <NavLink
+        to={section.path}
+        exact
+        key={section.id}
+        activeStyle={{ borderBottom: "4px solid #fff" }}
+        onClick={click}
+      >
         <button onClick={click} className={`menu-btn btn-${section.id}`}>
           {section.name}
         </button>

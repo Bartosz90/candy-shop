@@ -40,8 +40,8 @@
     top: 0 
     width: 100vw 
     height: 100vh
-    padding: 30% 0
-    background-color: $sea-blue
+    padding: 200px 0
+    background-color: $dark-blue
     z-index: 1
     border: 2px solid $salmon-pink
     transition: .3s linear
@@ -49,23 +49,30 @@
     display: flex
     flex-direction: column
     justify-content: space-between
+    align-items: center
+    flex-wrap: wrap
     .menu-btn
         height: 100px
-        width: 100%
+        width: 300px
         background-color: transparent
         border: none
-        text-align: left 
+        text-align: center 
         padding-left: 10px
         cursor: pointer
-    .btn-1
-        background-image: linear-gradient(to right, $yellow, rgba(0,0,0,0))
-    .btn-2
-        background-image: linear-gradient(to right, $violet, rgba(0,0,0,0))
-    .btn-3
-        background-image: linear-gradient(to right, $salmon-pink, rgba(0,0,0,0))
-    .btn-4
-        background-image: linear-gradient(to right, $pink, rgba(0,0,0,0))
+        visibility: hidden
+        font-size: 30px
+        text-transform: uppercase
+        color: #fff
+        border-bottom: 4px solid $dark-blue
+        transition: .3s linear
+        &:hover 
+            letter-spacing: 2px
+    a 
+        visibility: hidden
 .nav.active 
     transform: none
+    .menu-btn, a
+        visibility: visible
+
     
 

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter, Link } from "react-router-dom";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 import "../styles/App.sass";
 import WelcomePage from "./WelcomePage";
 import Nav from "./Nav.js";
@@ -30,9 +30,9 @@ class App extends Component {
   };
   render() {
     return (
-      <BrowserRouter>
+      <Router>
         <>
-          {this.state.welcomePageCounter < 0.1 && <WelcomePage />}
+          {this.state.welcomePageCounter < 7 && <WelcomePage />}
           <Nav
             active={this.state.isNavActive}
             click={this.handleMenu}
@@ -41,7 +41,7 @@ class App extends Component {
           <Main sections={this.state.sections} />
           <Footer />
         </>
-      </BrowserRouter>
+      </Router>
     );
   }
 }
