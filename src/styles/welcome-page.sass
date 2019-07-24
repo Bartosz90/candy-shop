@@ -1,0 +1,121 @@
+.welcome 
+    position: fixed
+    top: 0
+    width: 25vw 
+    height: 100vh
+.welcome-1 
+    left: 0 
+    background-color: #f5b5fc
+    animation: moveUp .6s 4.7s linear forwards
+.welcome-2 
+    left: 25vw
+    background-color: #96f7d2
+    animation: moveDown .6s 4.7s linear forwards
+.welcome-3 
+    left: 50vw
+    background-color: #f0f696
+    animation: moveUp .6s 4.7s linear forwards
+.welcome-4 
+    left: 75vw
+    background-color: #fcb1b1
+    animation: moveDown .6s 4.7s linear forwards
+
+@keyframes moveUp 
+    100% 
+        transform: translateY(-100%)
+@keyframes moveDown
+    100% 
+        transform: translateY(100%)
+
+.msg    
+    position: fixed
+    top: 50%
+    left: 50%
+    width: 100px
+    height: 100px
+    transform: translate(-65vw,-50%)
+    animation: fly 4.5s ease forwards
+    @media (max-width: 900px) 
+        width: 70px 
+        height: 70px
+    img 
+        width: 100%
+    &::after, &::before
+        display: block 
+        position: absolute 
+        background-color: #fff
+        border-radius: 40%
+        animation: fadeIn 4.5s linear
+    &::after
+        content: "Welcome to the Candy Shop!"
+        top: -80%
+        right: -160% 
+        width: 150px
+        height: 70px
+        padding: 10px
+        text-align: center 
+        z-index: 1
+        font-size: 25px
+        transform: scale(1)
+        @media (max-width: 900px)
+            width: 120px
+            height: 50px
+            font-size: 20px
+            top: -90%
+        @media (orientation: portrait) 
+            right: 10%
+            top: -100%
+    &::before 
+        content: ""
+        right: -10%
+        top: -14%
+        width: 15px 
+        height: 15px
+        transform: scale(0) rotate(-20deg)
+        @media (max-width: 900px)
+            top: -10%
+        @media (orientation: portrait) 
+            right: 10%
+
+@keyframes fly 
+    8% 
+        transform: translate(-50vw,-5vh)
+    15% 
+        transform: translate(-35vw,5vh)
+    25% 
+        transform: translate(-20vw,-5vh)
+    30% 
+        transform: translate(-10vw,-20%)
+    35% 
+        transform: translate(-50%,-50%)
+    65% 
+        transform: translate(-50%,-50%)
+    75% 
+        transform: translate(10vw,5vh)
+    85% 
+        transform: translate(20vw,-5vh)
+    95% 
+        transform: translate(35vw,5vh)
+        opacity: 1
+    100% 
+        transform: translate(65vw,-5vh)
+        opacity: 0
+@keyframes fadeIn 
+    0% 
+        transform: scale(0)
+    37% 
+        transform: scale(0)
+    38% 
+        transform: scale(1)
+    65% 
+        transform: scale(1)
+    66% 
+        transform: scale(0) 
+    100%
+        transform: scale(0)
+.author 
+    visibility: hidden
+
+
+    
+
