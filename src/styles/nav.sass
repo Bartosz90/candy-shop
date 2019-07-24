@@ -1,0 +1,54 @@
+@import "../index.sass"
+.nav-burger 
+    position: fixed 
+    top: 20px 
+    right: 20px 
+    height: 28px 
+    width: 40px
+    border: 1px solid $salmon-pink
+    padding: 5px
+    border-radius: 15%
+    box-sizing: content-box
+    background-color: transparent
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    cursor: pointer
+    outline: none 
+    z-index: 2
+
+    span 
+        width: 40px 
+        height: 4px
+        background-color: $sea-blue
+        border-radius: 15%
+        transition: .8s cubic-bezier(0.68, -0.55, 0.27, 1.55)
+        transform-origin: center
+    .span-2
+        width: 30px
+        align-self: center
+        opacity: 1
+.nav-burger.active .span-2 
+    transform: translateX(-80px)
+    opacity: 0
+.nav-burger.active .span-1 
+    transform: translateY(12px) rotate(-45deg)
+.nav-burger.active .span-3 
+    transform: translateY(-12px) rotate(45deg)
+.nav-burger.active span
+    background-color: $salmon-pink
+.nav 
+    position: fixed 
+    left: 0
+    top: 0 
+    width: 100vw 
+    height: 100vh
+    background-color: $sea-blue
+    z-index: 1
+    border: 2px solid $salmon-pink
+    transition: .8s cubic-bezier(0.68, -0.55, 0.27, 1.55)
+    transform: translateY(-100%)
+.nav.active 
+    transform: none
+    
+

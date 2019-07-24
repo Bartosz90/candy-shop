@@ -1,23 +1,25 @@
+@import "../index.sass"
 .welcome 
     position: fixed
     top: 0
     width: 25vw 
     height: 100vh
+    z-index: 4
 .welcome-1 
     left: 0 
-    background-color: #f5b5fc
+    background-color: $violet
     animation: moveUp .6s 4.7s linear forwards
 .welcome-2 
     left: 25vw
-    background-color: #96f7d2
+    background-color: $sea-blue
     animation: moveDown .6s 4.7s linear forwards
 .welcome-3 
     left: 50vw
-    background-color: #f0f696
+    background-color: $yellow
     animation: moveUp .6s 4.7s linear forwards
 .welcome-4 
     left: 75vw
-    background-color: #fcb1b1
+    background-color: $pink
     animation: moveDown .6s 4.7s linear forwards
 
 @keyframes moveUp 
@@ -35,6 +37,7 @@
     height: 100px
     transform: translate(-65vw,-50%)
     animation: fly 4.5s ease forwards
+    z-index: 5
     @media (max-width: 900px) 
         width: 70px 
         height: 70px
@@ -56,6 +59,7 @@
         text-align: center 
         z-index: 1
         font-size: 25px
+        font-family: 'Patrick Hand', sans-serif
         transform: scale(1)
         @media (max-width: 900px)
             width: 120px
@@ -100,6 +104,7 @@
     100% 
         transform: translate(65vw,-5vh)
         opacity: 0
+        visibility: hidden
 @keyframes fadeIn 
     0% 
         transform: scale(0)
@@ -113,6 +118,7 @@
         transform: scale(0) 
     100%
         transform: scale(0)
+        visibility: hidden
 .author 
     visibility: hidden
 
