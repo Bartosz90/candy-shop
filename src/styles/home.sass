@@ -46,6 +46,7 @@
             border-radius: 40%
             animation: fadeIn2 .2s linear forwards
             transform: scale(0)
+            transition: .2s linear
         .text-2
             top: -110%
             left: -160%
@@ -56,6 +57,8 @@
             z-index: 1
             font-size: 25px
             font-family: 'Patrick Hand', sans-serif
+            transition-delay: .2s
+            +flexCenter()
             @media (max-width: 900px)
                 width: 140px
                 height: 90px

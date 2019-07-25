@@ -29,7 +29,7 @@ class App extends Component {
 
     setTimeout(() => {
       this.setState({ animationDone: true });
-    }, 9000);
+    }, 10000);
   }
 
   handleMenu = () => {
