@@ -15,8 +15,10 @@ class App extends Component {
       { name: "about", id: 2, path: "/about" },
       { name: "products", id: 3, path: "/products" },
       { name: "contact", id: 4, path: "/contact" }
-    ]
+    ],
+    animationDone: false
   };
+
   componentDidMount() {
     const timer = setInterval(() => {
       this.setState({ welcomePageCounter: this.state.welcomePageCounter + 1 });
@@ -24,21 +26,30 @@ class App extends Component {
         clearInterval(timer);
       }
     }, 1000);
+
+    setTimeout(() => {
+      this.setState({ animationDone: true });
+    }, 9000);
   }
+
   handleMenu = () => {
     this.setState({ isNavActive: !this.state.isNavActive });
   };
+
   render() {
     return (
       <Router>
         <>
-          {this.state.welcomePageCounter < 1117 && <WelcomePage />}
+          {this.state.welcomePageCounter < 7 && <WelcomePage />}
           <Nav
             active={this.state.isNavActive}
             click={this.handleMenu}
             sections={this.state.sections}
           />
-          <Main sections={this.state.sections} />
+          <Main
+            sections={this.state.sections}
+            animationDone={this.state.animationDone}
+          />
           <Footer />
         </>
       </Router>

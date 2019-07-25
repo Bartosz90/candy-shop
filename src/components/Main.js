@@ -24,11 +24,16 @@ const Contact = () => {
     </section>
   );
 };
-const Main = props => {
+const Main = ({ animationDone }) => {
   return (
     <main className="main">
+      {/* <h1>{props.animationDone.toString()}</h1> */}
       <Switch>
-        <Route path="/" exact component={Home} />
+        <Route
+          path="/"
+          exact
+          render={() => <Home animationDone={animationDone} />}
+        />
         <Route path="/about" exact component={About} />
         <Route path="/products" exact component={Products} />
         <Route path="/contact" exact component={Contact} />

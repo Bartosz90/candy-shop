@@ -25,62 +25,50 @@
         position: fixed 
         right: -100px 
         top: 50%
-        animation: welcome 3s linear 5.5s forwards
-        @keyframes welcome 
-            5% 
-                transform: translateX(-80%) rotate(-10deg)
-            20% 
-                transform: translateX(-160%) rotate(10deg)
-            35% 
-                transform: translateX(-240%) rotate(-10deg)
-            50% 
-                transform: translateX(-320%) rotate(10deg)
-            65% 
-                transform: translateX(-400%) rotate(-10deg)
-            80% 
-                transform: translateX(-480%) rotate(10deg)
-            95% 
-                transform: translateX(-560%) rotate(-10deg)
+        @keyframes walk 
             100% 
-                transform: translateX(-560%) rotate(0deg)
+                right: 48%
+        @keyframes step
+            0%
+                transform: rotate(-8deg)
+            100%
+                transform: rotate(8deg)
+
         @media (max-width: 900px)
             width: 75px 
             height: 75px
         @media (orientation: portrait)
             right: -200px
-        &::after, &::before
+        .text-1, .text-2
             display: block 
             position: absolute 
             background-color: #fff
             border-radius: 40%
             animation: fadeIn2 .2s linear forwards
             transform: scale(0)
-        &::after
-            content: "Check out the menu above me!"
+        .text-2
             top: -110%
             left: -160%
-            width: 150px
-            height: 80px
+            width: 160px
+            height: 110px
             padding: 10px
             text-align: center 
             z-index: 1
             font-size: 25px
             font-family: 'Patrick Hand', sans-serif
-            animation-delay: 9s
             @media (max-width: 900px)
-                width: 120px
-                height: 70px
-                padding-top: 25px
+                width: 140px
+                height: 90px
+                padding-top: 15px
                 font-size: 20px
-                top: -130% 
-                left: 110%
-        &::before 
+                top: -120% 
+                left: 100%
+        .text-1
             content: ""
             left: -10%
             top: -14%
             width: 15px 
             height: 15px
-            animation-delay: 8.8s
             @media (max-width: 900px)
                 top: -10%
                 left: 100%

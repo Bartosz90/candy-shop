@@ -25,11 +25,39 @@ class Home extends Component {
   //       }
   //     }, 4000);
   //   }
+
   render() {
     return (
       <section className="home main-section">
         {/* <img src={this.images[this.state.activeIndex]} alt="sweets" /> */}
-        <div className="donut" style={{ backgroundImage: `url(${donut})` }} />
+        <div
+          className="donut"
+          style={{
+            backgroundImage: `url(${donut})`,
+            right: `${this.props.animationDone ? "48%" : "-100px"}`,
+            animation: `${
+              this.props.animationDone
+                ? "none"
+                : "walk 3s linear 5.5s forwards, step .1s linear 5.5s 30"
+            }`
+          }}
+        >
+          {" "}
+          <div
+            className="text-1"
+            style={{
+              animationDelay: `${this.props.animationDone ? "1s" : "8.8s"}`
+            }}
+          />
+          <div
+            className="text-2"
+            style={{
+              animationDelay: `${this.props.animationDone ? "1.2s" : "9s"}`
+            }}
+          >
+            Check out the menu above me!
+          </div>
+        </div>
       </section>
     );
   }
