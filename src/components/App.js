@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import "../styles/App.sass";
 import WelcomePage from "./WelcomePage";
 import Nav from "./Nav.js";
@@ -32,7 +32,7 @@ class App extends Component {
     return (
       <Router>
         <>
-          {this.state.welcomePageCounter < 7 && <WelcomePage />}
+          {this.state.welcomePageCounter < 1117 && <WelcomePage />}
           <Nav
             active={this.state.isNavActive}
             click={this.handleMenu}

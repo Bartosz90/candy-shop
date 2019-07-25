@@ -1,14 +1,8 @@
 import React from "react";
 import "../styles/main.sass";
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
+import Home from "./Home.js";
 
-const Home = () => {
-  return (
-    <section className="home main-section">
-      <h1>Home</h1>
-    </section>
-  );
-};
 const About = () => {
   return (
     <section className="about main-section">
@@ -33,10 +27,13 @@ const Contact = () => {
 const Main = props => {
   return (
     <main className="main">
-      <Route path="/" exact component={Home} />
-      <Route path="/about" exact component={About} />
-      <Route path="/products" exact component={Products} />
-      <Route path="/contact" exact component={Contact} />
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/about" exact component={About} />
+        <Route path="/products" exact component={Products} />
+        <Route path="/contact" exact component={Contact} />
+        <Route exact component={Home} />
+      </Switch>
     </main>
   );
 };
