@@ -9,7 +9,7 @@ const Nav = ({ active, click, sections }) => {
         to={section.path}
         exact
         key={section.id}
-        activeStyle={{ borderBottom: "4px solid #fff" }}
+        activeClassName="active-menu-btn"
         onClick={click}
       >
         <button onClick={click} className={`menu-btn btn-${section.id}`}>
