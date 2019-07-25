@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e428a34bd63e1f61e934eb002be6523f",
+    "revision": "6a89a1e1eccf05f098e125850549ebc0",
     "url": "/candy-shop/index.html"
   },
   {
-    "revision": "e32f286e2cac0249667d",
-    "url": "/candy-shop/static/css/main.59667991.chunk.css"
+    "revision": "b9dbfce691379951e4bf",
+    "url": "/candy-shop/static/css/main.af5227b7.chunk.css"
   },
   {
     "revision": "060d73e080b1f923a31a",
     "url": "/candy-shop/static/js/2.e48b0173.chunk.js"
   },
   {
-    "revision": "e32f286e2cac0249667d",
-    "url": "/candy-shop/static/js/main.2b58105d.chunk.js"
+    "revision": "b9dbfce691379951e4bf",
+    "url": "/candy-shop/static/js/main.3466f091.chunk.js"
   },
   {
     "revision": "c58c3fd2c5c36c38941d",
