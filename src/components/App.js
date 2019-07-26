@@ -40,7 +40,7 @@ class App extends Component {
     return (
       <Router>
         <>
-          {this.state.welcomePageCounter < 7 && <WelcomePage />}
+          {this.state.welcomePageCounter < 1 && <WelcomePage />}
           <Nav
             active={this.state.isNavActive}
             click={this.handleMenu}

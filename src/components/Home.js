@@ -6,6 +6,7 @@ import img3 from "../images/sweets3.jpg";
 import img4 from "../images/sweets4.jpg";
 import img5 from "../images/sweets5.jpg";
 import donut from "../images/donut.png";
+import HeaderHome from "./HeaderHome";
 
 class Home extends Component {
   state = {
@@ -38,22 +39,32 @@ class Home extends Component {
   ];
 
   componentDidMount() {
-    this.timer = setTimeout(() => {
-      this.timer2 = setInterval(() => {
-        this.setState({
-          textStyles: "0"
-        });
-        this.timer3 = setTimeout(() => {
+    if (this.props.animationDone) {
+      this.setState({
+        activeIndex:
+          Math.floor(Math.random() * (this.donutSentences.length - 1 - 1 + 1)) +
+          1
+      });
+    }
+    this.timer = setTimeout(
+      () => {
+        this.timer2 = setInterval(() => {
           this.setState({
-            textStyles: "1",
-            activeIndex:
-              Math.floor(
-                Math.random() * (this.donutSentences.length - 1 - 1 + 1)
-              ) + 1
+            textStyles: "0"
           });
-        }, 1000);
-      }, Math.floor(Math.random() * (10000 - 8000 + 1)) + 8000);
-    }, 5000);
+          this.timer3 = setTimeout(() => {
+            this.setState({
+              textStyles: "1",
+              activeIndex:
+                Math.floor(
+                  Math.random() * (this.donutSentences.length - 1 - 1 + 1)
+                ) + 1
+            });
+          }, 1000);
+        }, Math.floor(Math.random() * (10000 - 8000 + 1)) + 8000);
+      },
+      this.props.animationDone ? 100 : 5000
+    );
   }
   componentWillUnmount() {
     clearTimeout(this.timer);
@@ -65,6 +76,7 @@ class Home extends Component {
     return (
       <section className="home main-section">
         {/* <img src={this.images[this.state.activeIndex]} alt="sweets" /> */}
+        <HeaderHome animationDone={this.props.animationDone} />
         <div
           className="donut"
           style={{
@@ -77,7 +89,6 @@ class Home extends Component {
             }`
           }}
         >
-          {" "}
           <div
             className="text-1"
             style={{

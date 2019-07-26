@@ -2,6 +2,15 @@
 .home
     background-color: $violet
     overflow: hidden
+    +flexCenter()
+    align-items: flex-start
+    @media (max-width: 900px)
+        justify-content: flex-start
+        padding-left: 20px
+    @media (orientation: portrait) 
+        justify-content: center
+        padding-top: 100px
+        padding-left: 0
     h1 
         width: 51% 
     img 
@@ -17,6 +26,38 @@
                 opacity: 1 
             100% 
                 opacity: 0
+    .home-header 
+        width: 400px
+        +flexCenter()
+        margin-top: 200px
+        border-radius: 7%
+        overflow: hidden
+        @media (max-width: 900px)
+            margin-top: 20px
+            width: 300px
+        .letter 
+            width: 20%
+            height: 80px
+            line-height: 80px
+            border-radius: 10%
+            font-family: 'Patrick Hand', sans-serif
+            text-transform: uppercase
+            font-size: 70px
+            font-weight: bold
+            transform: scale(0)
+            animation: pop .3s forwards
+            animation-delay: 2s
+            transition: .3s linear
+            @media (max-width: 900px)
+                height: 60px
+                font-size: 60px
+                line-height: 60px
+            @keyframes pop 
+                99% 
+                    transform: scale(1.2)
+                100% 
+                    transform: scale(1)
+            +flexCenter()
     .donut  
         width: 100px
         height: 100px
@@ -24,7 +65,7 @@
         background-position: center
         position: fixed 
         right: -100px 
-        top: 50%
+        bottom: 40px
         @keyframes walk 
             100% 
                 right: 48%
@@ -66,6 +107,9 @@
                 font-size: 20px
                 top: -120% 
                 left: 100%
+            @media (orientation: landscape) and (max-width: 580px)
+                top: -90%
+                left: 130%
         .text-1
             content: ""
             left: -10%
