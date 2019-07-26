@@ -80,6 +80,25 @@
             height: 75px
         @media (orientation: portrait)
             right: -200px
+        .top-lip, .bot-lip
+            position: absolute
+            background-color: red
+            width: 25px 
+            height: 10px
+            left: 34%
+            border-radius: 50%
+            @media (max-width: 900px)
+                width: 20px
+        .top-lip 
+            top: 40%
+            @keyframes speak-up 
+                0% 
+                    transform: translateY(-40%)
+        .bot-lip 
+            bottom: 40%
+            @keyframes speak-down 
+                0% 
+                    transform: translateY(40%)
         .text-1, .text-2
             display: block 
             position: absolute 
@@ -122,3 +141,4 @@
         @keyframes fadeIn2 
             100% 
                 transform: scale(1)
+            

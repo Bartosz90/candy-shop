@@ -10,8 +10,10 @@ import HeaderHome from "./HeaderHome";
 
 class Home extends Component {
   state = {
-    activeIndex: 0,
-    textStyles: "1"
+    activeSentenceIndex: 0,
+    textOpacity: "1",
+    topLipAnimation: "speak-up .1s linear 8",
+    botLipAnimation: "speak-down .1s linear 8"
   };
   images = [img1, img2, img3, img4, img5];
   //   componentDidMount() {
@@ -41,7 +43,7 @@ class Home extends Component {
   componentDidMount() {
     if (this.props.animationDone) {
       this.setState({
-        activeIndex:
+        activeSentenceIndex:
           Math.floor(Math.random() * (this.donutSentences.length - 1 - 1 + 1)) +
           1
       });
@@ -50,18 +52,22 @@ class Home extends Component {
       () => {
         this.timer2 = setInterval(() => {
           this.setState({
-            textStyles: "0"
+            textOpacity: "0",
+            topLipAnimation: "none",
+            botLipAnimation: "none"
           });
           this.timer3 = setTimeout(() => {
             this.setState({
-              textStyles: "1",
-              activeIndex:
+              textOpacity: "1",
+              topLipAnimation: "speak-up .1s linear 8",
+              botLipAnimation: "speak-down .1s linear 8",
+              activeSentenceIndex:
                 Math.floor(
                   Math.random() * (this.donutSentences.length - 1 - 1 + 1)
                 ) + 1
             });
           }, 1000);
-        }, Math.floor(Math.random() * (10000 - 8000 + 1)) + 8000);
+        }, 6000);
       },
       this.props.animationDone ? 100 : 5000
     );
@@ -90,20 +96,34 @@ class Home extends Component {
           }}
         >
           <div
+            className="top-lip"
+            style={{
+              animation: this.state.topLipAnimation,
+              animationDelay: `${this.props.animationDone ? "1s" : "8.8s"}`
+            }}
+          />
+          <div
+            className="bot-lip"
+            style={{
+              animation: this.state.botLipAnimation,
+              animationDelay: `${this.props.animationDone ? "1s" : "8.8s"}`
+            }}
+          />
+          <div
             className="text-1"
             style={{
               animationDelay: `${this.props.animationDone ? "1s" : "8.8s"}`,
-              opacity: `${this.state.textStyles}`
+              opacity: `${this.state.textOpacity}`
             }}
           />
           <div
             className="text-2"
             style={{
               animationDelay: `${this.props.animationDone ? "1.2s" : "9s"}`,
-              opacity: `${this.state.textStyles}`
+              opacity: `${this.state.textOpacity}`
             }}
           >
-            {this.donutSentences[this.state.activeIndex]}
+            {this.donutSentences[this.state.activeSentenceIndex]}
           </div>
         </div>
       </section>

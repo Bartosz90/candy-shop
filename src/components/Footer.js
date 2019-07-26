@@ -29,7 +29,7 @@ const Footer = () => {
         </a>
       </div>
       <h1>
-        created and deigned by{" "}
+        2019{" "}
         <a
           href="https://bartosz90.github.io/Portfolio/"
           target="_blank"
