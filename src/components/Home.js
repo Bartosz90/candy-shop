@@ -1,10 +1,5 @@
 import React, { Component } from "react";
 import "../styles/home.sass";
-import img1 from "../images/sweets1.jpg";
-import img2 from "../images/sweets2.jpg";
-import img3 from "../images/sweets3.jpg";
-import img4 from "../images/sweets4.jpg";
-import img5 from "../images/sweets5.jpg";
 import donut from "../images/donut.png";
 import HeaderHome from "./HeaderHome";
 
@@ -12,10 +7,10 @@ class Home extends Component {
   state = {
     activeSentenceIndex: 0,
     textOpacity: "1",
-    topLipAnimation: "speak-up .1s linear 8",
-    botLipAnimation: "speak-down .1s linear 8"
+    topLipAnimation: "speak-up .1s linear 10",
+    botLipAnimation: "speak-down .1s linear 10"
   };
-  images = [img1, img2, img3, img4, img5];
+  // images = [img1, img2, img3, img4, img5];
   //   componentDidMount() {
   //     setInterval(() => {
   //       if (this.state.activeIndex === this.images.length - 1) {
@@ -59,8 +54,8 @@ class Home extends Component {
           this.timer3 = setTimeout(() => {
             this.setState({
               textOpacity: "1",
-              topLipAnimation: "speak-up .1s linear 8",
-              botLipAnimation: "speak-down .1s linear 8",
+              topLipAnimation: "speak-up .1s linear 10",
+              botLipAnimation: "speak-down .1s linear 10",
               activeSentenceIndex:
                 Math.floor(
                   Math.random() * (this.donutSentences.length - 1 - 1 + 1)
@@ -69,7 +64,7 @@ class Home extends Component {
           }, 1000);
         }, 6000);
       },
-      this.props.animationDone ? 100 : 5000
+      this.props.animationDone ? 100 : 7000
     );
   }
   componentWillUnmount() {

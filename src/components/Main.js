@@ -2,6 +2,7 @@ import React from "react";
 import "../styles/main.sass";
 import { Route, Switch } from "react-router-dom";
 import Home from "./Home.js";
+import Products from "./Products.js";
 
 const About = () => {
   return (
@@ -10,13 +11,7 @@ const About = () => {
     </section>
   );
 };
-const Products = () => {
-  return (
-    <section className="aroducts main-section">
-      <h1>Products</h1>
-    </section>
-  );
-};
+
 const Contact = () => {
   return (
     <section className="aontact main-section">
@@ -27,7 +22,6 @@ const Contact = () => {
 const Main = ({ animationDone }) => {
   return (
     <main className="main">
-      {/* <h1>{props.animationDone.toString()}</h1> */}
       <Switch>
         <Route
           path="/"
