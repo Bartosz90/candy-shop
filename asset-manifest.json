@@ -1,22 +1,17 @@
 {
   "files": {
-    "main.css": "/candy-shop/static/css/main.da4b681f.chunk.css",
-    "main.js": "/candy-shop/static/js/main.6ab5fa26.chunk.js",
-    "main.js.map": "/candy-shop/static/js/main.6ab5fa26.chunk.js.map",
+    "main.css": "/candy-shop/static/css/main.f7222094.chunk.css",
+    "main.js": "/candy-shop/static/js/main.11187189.chunk.js",
+    "main.js.map": "/candy-shop/static/js/main.11187189.chunk.js.map",
     "runtime~main.js": "/candy-shop/static/js/runtime~main.6db525d3.js",
     "runtime~main.js.map": "/candy-shop/static/js/runtime~main.6db525d3.js.map",
-    "static/js/2.286d1d08.chunk.js": "/candy-shop/static/js/2.286d1d08.chunk.js",
-    "static/js/2.286d1d08.chunk.js.map": "/candy-shop/static/js/2.286d1d08.chunk.js.map",
+    "static/js/2.88db62ca.chunk.js": "/candy-shop/static/js/2.88db62ca.chunk.js",
+    "static/js/2.88db62ca.chunk.js.map": "/candy-shop/static/js/2.88db62ca.chunk.js.map",
     "index.html": "/candy-shop/index.html",
-    "precache-manifest.6ccd62b2597caea99b8452f6d29e4414.js": "/candy-shop/precache-manifest.6ccd62b2597caea99b8452f6d29e4414.js",
+    "precache-manifest.f77fbbc53f7d404ce0eff06b73892cec.js": "/candy-shop/precache-manifest.f77fbbc53f7d404ce0eff06b73892cec.js",
     "service-worker.js": "/candy-shop/service-worker.js",
-    "static/css/main.da4b681f.chunk.css.map": "/candy-shop/static/css/main.da4b681f.chunk.css.map",
+    "static/css/main.f7222094.chunk.css.map": "/candy-shop/static/css/main.f7222094.chunk.css.map",
     "static/media/bee.png": "/candy-shop/static/media/bee.6dc4e4dc.png",
-    "static/media/donut.png": "/candy-shop/static/media/donut.068a6eea.png",
-    "static/media/sweets1.jpg": "/candy-shop/static/media/sweets1.826b92a5.jpg",
-    "static/media/sweets2.jpg": "/candy-shop/static/media/sweets2.334e06df.jpg",
-    "static/media/sweets3.jpg": "/candy-shop/static/media/sweets3.1b2bfc55.jpg",
-    "static/media/sweets4.jpg": "/candy-shop/static/media/sweets4.e7ae6f5b.jpg",
-    "static/media/sweets5.jpg": "/candy-shop/static/media/sweets5.8baca748.jpg"
+    "static/media/donut.png": "/candy-shop/static/media/donut.068a6eea.png"
   }
 }
