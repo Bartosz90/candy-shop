@@ -19,7 +19,7 @@ const Contact = () => {
     </section>
   );
 };
-const Main = ({ animationDone }) => {
+const Main = ({ animationDone, basket, click, handleProductRemove }) => {
   return (
     <main className="main">
       <Switch>
@@ -29,7 +29,16 @@ const Main = ({ animationDone }) => {
           render={() => <Home animationDone={animationDone} />}
         />
         <Route path="/about" exact component={About} />
-        <Route path="/products" exact component={Products} />
+        <Route
+          path="/products"
+          render={() => (
+            <Products
+              basket={basket}
+              click={click}
+              handleProductRemove={handleProductRemove}
+            />
+          )}
+        />
         <Route path="/contact" exact component={Contact} />
         <Route exact component={Home} />
       </Switch>

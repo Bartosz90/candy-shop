@@ -16,7 +16,8 @@ class App extends Component {
       { name: "products", id: 3, path: "/products" },
       { name: "contact", id: 4, path: "/contact" }
     ],
-    animationDone: false
+    animationDone: false,
+    basket: []
   };
 
   componentDidMount() {
@@ -35,6 +36,30 @@ class App extends Component {
   handleMenu = () => {
     this.setState({ isNavActive: !this.state.isNavActive });
   };
+  updatebasket = (id, name, quantity) => {
+    const currentBasket = [...this.state.basket];
+    const alreadyInBasket = currentBasket.filter(product => {
+      return product.id === id;
+    });
+    if (alreadyInBasket.length !== 0) {
+      return alert("This product is already in basket!");
+    } else {
+      const basket = this.state.basket.concat({
+        id: id,
+        name: name,
+        quantity: quantity
+      });
+      this.setState({ basket });
+    }
+  };
+  handleProductRemove = e => {
+    const basket = [...this.state.basket];
+    const index = basket.findIndex(product => {
+      return product.id.toString() === e.target.parentNode.attributes.id.value;
+    });
+    basket.splice(index, 1);
+    this.setState({ basket });
+  };
 
   render() {
     return (
@@ -49,6 +74,9 @@ class App extends Component {
           <Main
             sections={this.state.sections}
             animationDone={this.state.animationDone}
+            basket={this.state.basket}
+            click={this.updatebasket}
+            handleProductRemove={this.handleProductRemove}
           />
           <Footer />
         </>
