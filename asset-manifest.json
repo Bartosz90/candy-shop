@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/candy-shop/static/css/main.657f623a.chunk.css",
-    "main.js": "/candy-shop/static/js/main.11187189.chunk.js",
-    "main.js.map": "/candy-shop/static/js/main.11187189.chunk.js.map",
+    "main.css": "/candy-shop/static/css/main.564bf3ae.chunk.css",
+    "main.js": "/candy-shop/static/js/main.0d576bed.chunk.js",
+    "main.js.map": "/candy-shop/static/js/main.0d576bed.chunk.js.map",
     "runtime~main.js": "/candy-shop/static/js/runtime~main.6db525d3.js",
     "runtime~main.js.map": "/candy-shop/static/js/runtime~main.6db525d3.js.map",
-    "static/js/2.88db62ca.chunk.js": "/candy-shop/static/js/2.88db62ca.chunk.js",
-    "static/js/2.88db62ca.chunk.js.map": "/candy-shop/static/js/2.88db62ca.chunk.js.map",
+    "static/js/2.1e2e00d7.chunk.js": "/candy-shop/static/js/2.1e2e00d7.chunk.js",
+    "static/js/2.1e2e00d7.chunk.js.map": "/candy-shop/static/js/2.1e2e00d7.chunk.js.map",
     "index.html": "/candy-shop/index.html",
-    "precache-manifest.68f666b5eaf23380803981f442dc76cc.js": "/candy-shop/precache-manifest.68f666b5eaf23380803981f442dc76cc.js",
+    "precache-manifest.02878647609afe6ade342b597a0fa0e6.js": "/candy-shop/precache-manifest.02878647609afe6ade342b597a0fa0e6.js",
     "service-worker.js": "/candy-shop/service-worker.js",
-    "static/css/main.657f623a.chunk.css.map": "/candy-shop/static/css/main.657f623a.chunk.css.map",
+    "static/css/main.564bf3ae.chunk.css.map": "/candy-shop/static/css/main.564bf3ae.chunk.css.map",
     "static/media/bee.png": "/candy-shop/static/media/bee.6dc4e4dc.png",
     "static/media/donut.png": "/candy-shop/static/media/donut.068a6eea.png"
   }
