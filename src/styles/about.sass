@@ -1,27 +1,34 @@
 @import "../index.sass"
+@function randomNum($min, $max) 
+  $rand: random();
+  $randomNum: $min + floor($rand * (($max - $min) + 1));
+  @return $randomNum
+
 main.main
     .main-section.about 
         height: calc(100vh - 40px)
         +flexCenter()
         position: relative
         overflow: hidden
-        img 
-            height: 150%
-            position: absolute
-            top: 50% 
-            left: 50% 
-            transform: translate(-50%,-50%)
-            @media (max-width: 1400px)
-                height: 130%
-            @media (max-width: 420px)
-                transform: translate(-50%,-50%) rotate(-90deg)
-                height: 75%
+        .animation-container
+            position: absolute 
+            top: 0
+            left: 0
+            width: 100% 
+            height: 100%
+            img 
+                position: absolute
+                animation: shakeSweet ease-in-out infinite
+                opacity: .8
+                @keyframes shakeSweet 
+                    100% 
+                        transform: translateY(115vh) rotate(360deg)
         .text
             width: 60%
+            padding: 10px
             +flexCenter()
-            @media (max-width: 420px)
-                width: 50%
-                margin-right: 15vw
+            background-color: rgba(246, 126, 125, .9)
+            z-index: 1
             h1,h2 
                 opacity: 0
                 width: 100%
