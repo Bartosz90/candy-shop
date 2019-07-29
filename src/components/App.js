@@ -40,7 +40,8 @@ class App extends Component {
   handleMenu = () => {
     this.setState({ isNavActive: !this.state.isNavActive });
   };
-  updatebasket = (id, name, quantity) => {
+  updatebasket = (e, id, name, quantity) => {
+    e.preventDefault();
     const currentBasket = [...this.state.basket];
     const alreadyInBasket = currentBasket.filter(product => {
       return product.id === id;

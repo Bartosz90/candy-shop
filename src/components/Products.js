@@ -20,26 +20,26 @@ import SugarDonut from "../images/sweets/sugar-donut.png";
 class Products extends Component {
   state = {
     products: [
-      { id: 1, name: "Chocolate Ice", img: `${ChocIce}`, quantity: 0 },
-      { id: 2, name: "Chocolate Bar", img: `${ChocBar}`, quantity: 0 },
-      { id: 3, name: "Chocolate Cookies", img: `${ChocCookies}`, quantity: 0 },
-      { id: 4, name: "Fruit Cup", img: `${FruitCup}`, quantity: 0 },
-      { id: 5, name: "Fruit Cone", img: `${FruitIce}`, quantity: 0 },
-      { id: 6, name: "Fruit Lollipop", img: `${FruitLolli}`, quantity: 0 },
-      { id: 7, name: "Lemon Cake", img: `${LemonCake}`, quantity: 0 },
-      { id: 8, name: "Banana Cup", img: `${LemonCup}`, quantity: 0 },
-      { id: 9, name: "Strawberry Donut", img: `${StrawDonut}`, quantity: 0 },
-      { id: 10, name: "Strawberry Ice", img: `${StrawIce}`, quantity: 0 },
-      { id: 11, name: "Strawberry Muffin", img: `${StrawMuffin}`, quantity: 0 },
-      { id: 12, name: "Strawberry Candy", img: `${StrawSweet}`, quantity: 0 },
+      { id: 1, name: "Chocolate Ice", img: `${ChocIce}`, quantity: 1 },
+      { id: 2, name: "Chocolate Bar", img: `${ChocBar}`, quantity: 1 },
+      { id: 3, name: "Chocolate Cookies", img: `${ChocCookies}`, quantity: 1 },
+      { id: 4, name: "Fruit Cup", img: `${FruitCup}`, quantity: 1 },
+      { id: 5, name: "Fruit Cone", img: `${FruitIce}`, quantity: 1 },
+      { id: 6, name: "Fruit Lollipop", img: `${FruitLolli}`, quantity: 1 },
+      { id: 7, name: "Lemon Cake", img: `${LemonCake}`, quantity: 1 },
+      { id: 8, name: "Banana Cup", img: `${LemonCup}`, quantity: 1 },
+      { id: 9, name: "Strawberry Donut", img: `${StrawDonut}`, quantity: 1 },
+      { id: 10, name: "Strawberry Ice", img: `${StrawIce}`, quantity: 1 },
+      { id: 11, name: "Strawberry Muffin", img: `${StrawMuffin}`, quantity: 1 },
+      { id: 12, name: "Strawberry Candy", img: `${StrawSweet}`, quantity: 1 },
       {
         id: 13,
         name: "Chocolate Straw.",
         img: `${StrawWitchChoc}`,
-        quantity: 0
+        quantity: 1
       },
-      { id: 14, name: "Toffee Pancakes", img: `${ToffeePan}`, quantity: 0 },
-      { id: 15, name: "Sugar Donut", img: `${SugarDonut}`, quantity: 0 }
+      { id: 14, name: "Toffee Pancakes", img: `${ToffeePan}`, quantity: 1 },
+      { id: 15, name: "Sugar Donut", img: `${SugarDonut}`, quantity: 1 }
     ],
     basketActive: false,
     checkoutClicked: false
@@ -71,25 +71,24 @@ class Products extends Component {
         <section className="product" key={product.id}>
           <img src={product.img} alt={product.name} />
           <h2>{product.name}</h2>
-          <div className="input">
+          <form
+            className="input"
+            onSubmit={e =>
+              this.props.click(e, product.id, product.name, product.quantity)
+            }
+          >
             <label htmlFor="number">Quantity:</label>{" "}
             <input
               type="number"
               min="1"
-              max="5"
+              max="10"
               id="number"
               value={product.quantity}
               product={product.name}
               onChange={this.handleQuantity}
             />
-          </div>
-          <button
-            onClick={() =>
-              this.props.click(product.id, product.name, product.quantity)
-            }
-          >
-            Add to basket
-          </button>
+            <button type="submit">Add to basket</button>
+          </form>
         </section>
       );
     });
