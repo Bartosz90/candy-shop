@@ -55,11 +55,23 @@ class App extends Component {
         alertActive: true,
         alertText: "Add at least 1 product!"
       });
+    } else if (quantity > 10) {
+      this.setState({
+        alertActive: true,
+        alertText: "You can buy max 10 at once!"
+      });
     } else {
+      let newQuantity;
+      if (quantity.length > 1 && quantity[0].toString() === "0") {
+        newQuantity = quantity.slice(1, quantity.length);
+        console.log(newQuantity);
+      } else {
+        newQuantity = quantity;
+      }
       const basket = this.state.basket.concat({
         id: id,
         name: name,
-        quantity: quantity
+        quantity: newQuantity
       });
       this.setState({ basket, cartIconTrigger: true });
       setTimeout(() => {
@@ -89,7 +101,7 @@ class App extends Component {
               alertText={this.state.alertText}
             />
           )}
-          {this.state.welcomePageCounter < 1 && <WelcomePage />}
+          {this.state.welcomePageCounter < 7 && <WelcomePage />}
           <Nav
             active={this.state.isNavActive}
             click={this.handleMenu}
