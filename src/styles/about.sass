@@ -1,0 +1,51 @@
+@import "../index.sass"
+main.main
+    .main-section.about 
+        height: calc(100vh - 40px)
+        +flexCenter()
+        position: relative
+        overflow: hidden
+        img 
+            height: 150%
+            position: absolute
+            top: 50% 
+            left: 50% 
+            transform: translate(-50%,-50%)
+            @media (max-width: 1400px)
+                height: 130%
+            @media (max-width: 420px)
+                transform: translate(-50%,-50%) rotate(-90deg)
+                height: 75%
+        .text
+            width: 60%
+            +flexCenter()
+            @media (max-width: 420px)
+                width: 50%
+                margin-right: 15vw
+            h1,h2 
+                opacity: 0
+                width: 100%
+                margin-bottom: 20px
+                color: #fff 
+                text-align: center
+                animation: textAppear 1s ease forwards
+                font-size: 50px
+                font-family: 'Patrick Hand', sans-serif
+                @keyframes textAppear 
+                    100% 
+                        opacity: 1
+                @media (max-width: 900px)
+                    font-size: 30px
+            h1 
+                animation-delay: .5s
+            h2 
+                animation-delay: 1.5s
+        .hamburger-bgc 
+            position: fixed 
+            width: 48px 
+            height: 36px 
+            top: 16px 
+            right: 16px 
+            border: 1px solid $dark-blue
+            background-color: $pink
+            border-radius: 8%

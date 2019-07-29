@@ -3,14 +3,15 @@ import "../styles/main.sass";
 import { Route, Switch } from "react-router-dom";
 import Home from "./Home.js";
 import Products from "./Products.js";
+import About from "./About.js";
 
-const About = () => {
-  return (
-    <section className="about main-section">
-      <h1>About</h1>
-    </section>
-  );
-};
+// const About = () => {
+//   return (
+//     <section className="about main-section">
+//       <h1>About</h1>
+//     </section>
+//   );
+// };
 
 const Contact = () => {
   return (
