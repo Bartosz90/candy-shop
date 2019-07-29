@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/candy-shop/static/css/main.79db0287.chunk.css",
+    "main.css": "/candy-shop/static/css/main.20aa1584.chunk.css",
     "main.js": "/candy-shop/static/js/main.a13e0dfb.chunk.js",
     "main.js.map": "/candy-shop/static/js/main.a13e0dfb.chunk.js.map",
     "runtime~main.js": "/candy-shop/static/js/runtime~main.6db525d3.js",
@@ -8,9 +8,9 @@
     "static/js/2.1e2e00d7.chunk.js": "/candy-shop/static/js/2.1e2e00d7.chunk.js",
     "static/js/2.1e2e00d7.chunk.js.map": "/candy-shop/static/js/2.1e2e00d7.chunk.js.map",
     "index.html": "/candy-shop/index.html",
-    "precache-manifest.f2c7f70e24edafcb08c2bea19f383df6.js": "/candy-shop/precache-manifest.f2c7f70e24edafcb08c2bea19f383df6.js",
+    "precache-manifest.ba37acdb4f905c0148deee57d3a46cb4.js": "/candy-shop/precache-manifest.ba37acdb4f905c0148deee57d3a46cb4.js",
     "service-worker.js": "/candy-shop/service-worker.js",
-    "static/css/main.79db0287.chunk.css.map": "/candy-shop/static/css/main.79db0287.chunk.css.map",
+    "static/css/main.20aa1584.chunk.css.map": "/candy-shop/static/css/main.20aa1584.chunk.css.map",
     "static/media/bee.png": "/candy-shop/static/media/bee.6dc4e4dc.png",
     "static/media/donut.png": "/candy-shop/static/media/donut.068a6eea.png"
   }
