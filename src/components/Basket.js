@@ -7,7 +7,8 @@ const Basket = ({
   basket,
   handleProductRemove,
   handleChoeckout,
-  checkoutClicked
+  checkoutClicked,
+  cartIconTrigger
 }) => {
   const cart = basket.map(product => {
     return (
@@ -38,7 +39,13 @@ const Basket = ({
         <ul className="list">{cart}</ul>
       )}
 
-      <div className={"shopping-cart"} onClick={click}>
+      <div
+        className={"shopping-cart"}
+        onClick={click}
+        style={{
+          animation: `${cartIconTrigger ? "shadow .5s ease forwards" : "none"}`
+        }}
+      >
         {basketActive ? (
           <i className="fas fa-times-circle" />
         ) : (

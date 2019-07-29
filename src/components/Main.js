@@ -19,7 +19,13 @@ const Contact = () => {
     </section>
   );
 };
-const Main = ({ animationDone, basket, click, handleProductRemove }) => {
+const Main = ({
+  animationDone,
+  basket,
+  click,
+  handleProductRemove,
+  cartIconTrigger
+}) => {
   return (
     <main className="main">
       <Switch>
@@ -36,6 +42,7 @@ const Main = ({ animationDone, basket, click, handleProductRemove }) => {
               basket={basket}
               click={click}
               handleProductRemove={handleProductRemove}
+              cartIconTrigger={cartIconTrigger}
             />
           )}
         />

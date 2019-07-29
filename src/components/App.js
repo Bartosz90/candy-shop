@@ -17,7 +17,8 @@ class App extends Component {
       { name: "contact", id: 4, path: "/contact" }
     ],
     animationDone: false,
-    basket: []
+    basket: [],
+    cartIconTrigger: false
   };
 
   componentDidMount() {
@@ -49,7 +50,10 @@ class App extends Component {
         name: name,
         quantity: quantity
       });
-      this.setState({ basket });
+      this.setState({ basket, cartIconTrigger: true });
+      setTimeout(() => {
+        this.setState({ cartIconTrigger: false });
+      }, 1000);
     }
   };
   handleProductRemove = e => {
@@ -77,6 +81,7 @@ class App extends Component {
             basket={this.state.basket}
             click={this.updatebasket}
             handleProductRemove={this.handleProductRemove}
+            cartIconTrigger={this.state.cartIconTrigger}
           />
           <Footer />
         </>

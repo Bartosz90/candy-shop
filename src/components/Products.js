@@ -125,6 +125,7 @@ class Products extends Component {
           handleProductRemove={this.props.handleProductRemove}
           checkoutClicked={this.state.checkoutClicked}
           handleChoeckout={this.handleCheckout}
+          cartIconTrigger={this.props.cartIconTrigger}
         />
       </>
     );
