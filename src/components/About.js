@@ -1,5 +1,5 @@
 import React from "react";
-import candyFrame from "../images/candy-frame.png";
+import candyFrame from "../images/candy-frame-min.png";
 import "../styles/about.sass";
 const About = () => {
   return (
