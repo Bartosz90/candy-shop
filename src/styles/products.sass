@@ -148,7 +148,7 @@
         li:nth-child(odd) 
             background-color: rgba(246, 126, 125, .3)
         p, button 
-            margin-right: 10px
+            margin-right: 20px
         p
             text-align: right
             @media (max-width: 420px)
@@ -161,14 +161,16 @@
             background-color: transparent
             cursor: pointer
             color: #fff
-            font-size: 20px
+            font-size: 22px
     .checkout 
         position: absolute
+        box-sizing: content-box
         bottom: 0
         left: 50% 
         transform: translateX(-50%)
         height: 35px 
         width: 100px
+        padding: 3px
         cursor: pointer 
         text-transform: uppercase 
         background-color: $salmon-pink
