@@ -5,9 +5,11 @@
         min-height: 100vh
         .products-container
             width: 1400px
-            margin-bottom: 45px
+            margin: 45px 0
             +flexCenter()
             justify-content: space-between
+            @media (max-width: 1400px)
+                width: 1300px
             @media (max-width: 900px)
                 width: 100vw
                 padding: 10px
@@ -26,6 +28,8 @@
                     width: 100% 
                     color: #fff
                     text-align: center
+                    @media (max-width: 1400px)
+                        font-size: 22px
                     @media (max-width: 900px)
                         font-size: 18px
                     @media (orientation: landscape) and (max-width: 580px)
@@ -44,8 +48,9 @@
                         background-color: $pink
                         @media (orientation: landscape) and (max-width: 900px)
                             width: 30%
-                &:hover 
-                    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
+                @media (min-width: 900px)
+                    &:hover 
+                        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
                 img 
                     width: 50%
                 button 
@@ -58,10 +63,11 @@
                     cursor: pointer
                     color: #fff 
                     transition: .3s linear
-                    &:hover 
-                        background-color: $dark-blue 
-                        border-color: $salmon-pink
-                    @media (max-width: 900px)
+                    @media (min-width: 900px)
+                        &:hover 
+                            background-color: $dark-blue 
+                            border-color: $salmon-pink
+                    @media (max-width: 1400px)
                         width: 100%
                         font-size: 13px
                     @media (orientation: landscape) and (max-width: 580px)
@@ -85,9 +91,12 @@
     transition: .3s
     +flexCenter()
     justify-content: flex-end
+    z-index: 1
     @media (max-width: 420px)
-        width: 310px
-        transform: translate(-310px, -50%)
+        width: 100vw
+        top: 0
+        transform: translate(0, -100%)
+        justify-content: center
     .shopping-cart 
         position: absolute 
         top: 50% 
@@ -103,28 +112,45 @@
         border: 4px solid $salmon-pink
         transition: .3s
         cursor: pointer
-        &:hover 
-            background-color: $salmon-pink
+        @media (min-width: 900px)
+            &:hover 
+                background-color: $salmon-pink
         @media (max-width: 420px)
             width: 50px
             height: 50px
-            right: -50px
             font-size: 25px
+            right: auto 
+            top: auto 
+            left: 10px 
+            bottom: -75px
 
     .list 
         list-style: none
-        width: 90%
-
-
+        width: 100%
+        @media (max-width: 420px)
+            width: 100%
         li 
             +flexCenter()
             flex-wrap: nowrap
             justify-content: flex-end
-            margin: 25px 0
+            height: 50px
+            @media (max-width: 900px)
+                height: 50px
+            @media (max-width: 420px)
+                height: 70px
+                justify-content: center
+                margin: 0
+        li:nth-of-type(1)
+            @media (max-width: 420px)
+                margin-top: 60px
+        li:nth-child(odd) 
+            background-color: rgba(246, 126, 125, .3)
         p, button 
             margin-right: 10px
         p
             text-align: right
+            @media (max-width: 420px)
+                text-align: center
         p:nth-of-type(1)
             text-decoration: underline
             font-size: 20px
@@ -133,13 +159,13 @@
             background-color: transparent
             cursor: pointer
             color: #fff
-            // +flexCenter()
             font-size: 20px
     .checkout 
         align-self: flex-end
         height: 35px 
         width: 100px
         margin-right: 125px
+        margin-top: 20px
         cursor: pointer 
         text-transform: uppercase 
         background-color: $salmon-pink
@@ -149,10 +175,23 @@
         transition: .3s 
         border: 4px solid $salmon-pink
         border-bottom: none
-        &:hover 
-            background-color: $pink
+        @media (min-width: 900px)
+            &:hover 
+                background-color: $pink
+        @media (max-width: 420px)
+            margin-top: 0
+            margin: 0 calc(100vw/2-100px)
+            position: absolute
+            top: 0
 .basket.active 
     transform: translate(-10px, -50%)
     @media (max-width: 420px) 
-        transform: translate(-40px, -50%)
+        transform: translate(0)
+    .shopping-cart 
+        @media (max-width: 420px)
+            bottom: auto 
+            top: 0
+            transform: none
+            border: none
+    
 
