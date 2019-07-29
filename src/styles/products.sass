@@ -185,26 +185,34 @@
             bottom: auto
             top: 0
 
-    .checkout.active::after, .checkout.active::before
+    .checkout::after, .checkout::before
         position: absolute
         background-color: $dark-blue
         transition: .3s
-        visibility: visible
-    .checkout.active::after 
+        opacity: 0
+        visibility: hidden
+    .checkout::after 
         width: 150%
         height: 100% 
         bottom: -130%
         left: 50%
-        transform: translateX(-50%)
+        transform: translate(-50%,-50px)
         content: "In production."
         +flexCenter()
-    .checkout.active::before 
+    .checkout::before 
         width: 15px 
         height: 15px
         left: 50% 
         bottom: -50%
         content: ""
-        transform: translatex(-50%) rotate(45deg)
+        transform: translate(-50%,-50px) rotate(45deg)
+    .checkout.active::after, .checkout.active::before
+        opacity: 1
+        visibility: visible
+    .checkout.active::after
+        transform: translate(-50%, 0)
+    .checkout.active::before
+        transform: translate(-50%,0) rotate(45deg)
 .basket.active 
     transform: translate(-10px, -50%)
     @media (max-width: 420px) 
