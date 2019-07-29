@@ -5,6 +5,7 @@ import WelcomePage from "./WelcomePage";
 import Nav from "./Nav.js";
 import Main from "./Main.js";
 import Footer from "./Footer.js";
+import Alert from "./Alert.js";
 
 class App extends Component {
   state = {
@@ -18,7 +19,9 @@ class App extends Component {
     ],
     animationDone: false,
     basket: [],
-    cartIconTrigger: false
+    cartIconTrigger: false,
+    alertActive: false,
+    alertText: ""
   };
 
   componentDidMount() {
@@ -43,7 +46,15 @@ class App extends Component {
       return product.id === id;
     });
     if (alreadyInBasket.length !== 0) {
-      return alert("This product is already in basket!");
+      this.setState({
+        alertActive: true,
+        alertText: "This product is already in basket!"
+      });
+    } else if (quantity === 0) {
+      this.setState({
+        alertActive: true,
+        alertText: "Add at least 1 product!"
+      });
     } else {
       const basket = this.state.basket.concat({
         id: id,
@@ -64,11 +75,20 @@ class App extends Component {
     basket.splice(index, 1);
     this.setState({ basket });
   };
+  handleAlert = () => {
+    this.setState({ alertActive: false });
+  };
 
   render() {
     return (
       <Router>
         <>
+          {this.state.alertActive && (
+            <Alert
+              handleAlert={this.handleAlert}
+              alertText={this.state.alertText}
+            />
+          )}
           {this.state.welcomePageCounter < 1 && <WelcomePage />}
           <Nav
             active={this.state.isNavActive}

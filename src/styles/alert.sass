@@ -1,0 +1,29 @@
+@import "../index.sass"
+
+.alert
+    width: 320px 
+    height: 200px 
+    position: fixed 
+    top: 20px 
+    left: 50% 
+    transform: translate(-50%, -200px)
+    z-index: 10 
+    background-color: $pink
+    border: 10px solid $salmon-pink
+    +flexCenter()
+    animation: slideDown .5s ease forwards
+    @keyframes slideDown 
+        100%
+            transform: translateX(-50%)
+    p 
+        font-size: 30px
+        text-align: center
+        color: #fff
+    button
+        height: 40px
+        width: 100px
+        background-color: $dark-blue
+        border: none
+        color: #fff
+        font-weight: bold
+        cursor: pointer
