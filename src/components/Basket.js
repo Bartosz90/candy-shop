@@ -1,7 +1,14 @@
 import React from "react";
 import "../styles/products.sass";
 
-const Basket = ({ basketActive, click, basket, handleProductRemove }) => {
+const Basket = ({
+  basketActive,
+  click,
+  basket,
+  handleProductRemove,
+  handleChoeckout,
+  checkoutClicked
+}) => {
   const cart = basket.map(product => {
     return (
       <li key={product.id}>
@@ -38,7 +45,12 @@ const Basket = ({ basketActive, click, basket, handleProductRemove }) => {
           <i className="fas fa-shopping-cart" />
         )}
       </div>
-      <button className="checkout">Checkout</button>
+      <button
+        className={checkoutClicked ? "checkout active" : "checkout"}
+        onClick={handleChoeckout}
+      >
+        Checkout
+      </button>
     </section>
   );
 };

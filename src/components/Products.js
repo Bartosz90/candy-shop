@@ -41,7 +41,8 @@ class Products extends Component {
       { id: 14, name: "Toffee Pancakes", img: `${ToffeePan}`, quantity: 1 },
       { id: 15, name: "Sugar Donut", img: `${SugarDonut}`, quantity: 1 }
     ],
-    basketActive: false
+    basketActive: false,
+    checkoutClicked: false
   };
   handleQuantity = e => {
     const products = this.state.products.map(product => {
@@ -56,6 +57,13 @@ class Products extends Component {
 
   handleBasketActive = () => {
     this.setState({ basketActive: !this.state.basketActive });
+  };
+
+  handleCheckout = () => {
+    this.setState({ checkoutClicked: true });
+    setTimeout(() => {
+      this.setState({ checkoutClicked: false });
+    }, 1500);
   };
   render() {
     const products = this.state.products.map(product => {
@@ -115,6 +123,8 @@ class Products extends Component {
           basketActive={this.state.basketActive}
           basket={this.props.basket}
           handleProductRemove={this.props.handleProductRemove}
+          checkoutClicked={this.state.checkoutClicked}
+          handleChoeckout={this.handleCheckout}
         />
       </>
     );
