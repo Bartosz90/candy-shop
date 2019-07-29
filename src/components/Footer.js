@@ -6,14 +6,16 @@ const Footer = () => {
     <footer className="footer">
       <div className="icons">
         <a
-          href="https://github.com/Bartosz90"
+          // href="https://github.com/Bartosz90"
+          href="https://www.youtube.com"
           target="_blank"
           rel="noopener noreferrer"
         >
           <i className="fab fa-github-square" />
         </a>
         <a
-          href="https://www.facebook.com/bartek.krupa.503"
+          // href="https://www.facebook.com/bartek.krupa.503"
+          href="https://www.youtube.com"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -21,7 +23,8 @@ const Footer = () => {
         </a>
 
         <a
-          href="https://www.linkedin.com/in/bartosz-krupa-95b715159/"
+          // href="https://www.linkedin.com/in/bartosz-krupa-95b715159/"
+          href="https://www.youtube.com"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -31,7 +34,8 @@ const Footer = () => {
       <h1>
         2019{" "}
         <a
-          href="https://bartosz90.github.io/Portfolio/"
+          // href="https://bartosz90.github.io/Portfolio/"
+          href="https://www.youtube.com"
           target="_blank"
           rel="noopener noreferrer"
         >
