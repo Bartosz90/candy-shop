@@ -17,10 +17,6 @@ import StrawWitchChoc from "../images/sweets/straw-with-choc.png";
 import ToffeePan from "../images/sweets/toffee-pancakes.png";
 import SugarDonut from "../images/sweets/sugar-donut.png";
 
-{
-  /* <div>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/"     title="Flaticon">www.flaticon.com</a> messages.attribution.is_licensed_by <a href="http://creativecommons.org/licenses/by/3.0/"     title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> */
-}
-
 class Products extends Component {
   state = {
     products: [
@@ -93,6 +89,26 @@ class Products extends Component {
       <>
         <section className="products main-section">
           <div className="products-container">{products}</div>
+          <div className="authors">
+            Icons made by{" "}
+            <a
+              href="https://www.flaticon.com/authors/smashicons"
+              title="Smashicons"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Smashicons
+            </a>{" "}
+            from{" "}
+            <a
+              href="https://www.flaticon.com/"
+              title="Flaticon"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              www.flaticon.com
+            </a>{" "}
+          </div>
         </section>
         <Basket
           click={this.handleBasketActive}

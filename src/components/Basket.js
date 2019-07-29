@@ -15,7 +15,22 @@ const Basket = ({ basketActive, click, basket, handleProductRemove }) => {
   });
   return (
     <section className={basketActive ? "basket active" : "basket"}>
-      <ul className="list">{cart}</ul>
+      {basket.length === 0 ? (
+        <h1
+          style={{
+            color: "white",
+            position: "absolute",
+            left: "50%",
+            top: "50%",
+            transform: "translate(-50%,-50%)"
+          }}
+        >
+          Empty :(
+        </h1>
+      ) : (
+        <ul className="list">{cart}</ul>
+      )}
+
       <div className={"shopping-cart"} onClick={click}>
         {basketActive ? (
           <i className="fas fa-times-circle" />

@@ -92,11 +92,13 @@
     +flexCenter()
     justify-content: flex-end
     z-index: 1
+    padding-bottom: 50px
     @media (max-width: 420px)
         width: 100vw
         top: 0
         transform: translate(0, -100%)
         justify-content: center
+        padding-bottom: 0
     .shopping-cart 
         position: absolute 
         top: 50% 
@@ -161,11 +163,12 @@
             color: #fff
             font-size: 20px
     .checkout 
-        align-self: flex-end
+        position: absolute
+        bottom: 0
+        left: 50% 
+        transform: translateX(-50%)
         height: 35px 
         width: 100px
-        margin-right: 125px
-        margin-top: 20px
         cursor: pointer 
         text-transform: uppercase 
         background-color: $salmon-pink
@@ -179,9 +182,8 @@
             &:hover 
                 background-color: $pink
         @media (max-width: 420px)
-            margin-top: 0
             margin: 0 calc(100vw/2-100px)
-            position: absolute
+            bottom: auto
             top: 0
 .basket.active 
     transform: translate(-10px, -50%)
@@ -194,4 +196,29 @@
             transform: none
             border: none
     
-
+.authors 
+    position: absolute
+    width: 400px
+    height: 40px
+    line-height: 40px
+    color: #fff
+    text-align: center
+    background-color: rgba(246, 126, 125, .3)
+    transform-origin: center 
+    right: -200px
+    top: 50%
+    transform: rotate(-90deg) translateY(-50%)
+    a 
+        color: #fff
+    @media (max-width: 900px) 
+        right: auto 
+        left: 0 
+        top: 0
+        transform: none
+        width: 280px
+        height: 30px 
+        line-height: 30px
+        font-size: 10px
+    @media (max-width: 420px)
+        width: 100vw
+        
