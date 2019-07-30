@@ -15,6 +15,10 @@ import StrawSweet from "../images/sweets/straw-sweet.png";
 import StrawWitchChoc from "../images/sweets/straw-with-choc.png";
 import ToffeePan from "../images/sweets/toffee-pancakes.png";
 import SugarDonut from "../images/sweets/sugar-donut.png";
+import Cone2 from "../images/sweets/cone2.png";
+import Bar2 from "../images/sweets/bar2.png";
+import iceViolet from "../images/sweets/ice-cream-violet.png";
+import Pancakes2 from "../images/sweets/pancakes2.png";
 
 const About = () => {
   const images = [
@@ -32,7 +36,11 @@ const About = () => {
     { id: 12, img: StrawSweet },
     { id: 13, img: StrawWitchChoc },
     { id: 14, img: ToffeePan },
-    { id: 15, img: SugarDonut }
+    { id: 15, img: SugarDonut },
+    { id: 16, img: Cone2 },
+    { id: 17, img: Bar2 },
+    { id: 18, img: iceViolet },
+    { id: 19, img: Pancakes2 }
   ];
 
   const sweets = images.map(image => {
@@ -44,8 +52,8 @@ const About = () => {
         style={{
           left: `${Math.floor(Math.random() * (100 - 0 + 1)) + 0}vw`,
           top: `-100px`,
-          animationDelay: `${(Math.random() * (5 - 0 + 1) + 0).toFixed(1)}s`,
-          width: `${Math.floor(Math.random() * (60 - 30 + 1)) + 30}px`,
+          animationDelay: `${(Math.random() * (7 - 0 + 1) + 0).toFixed(1)}s`,
+          width: `${Math.floor(Math.random() * (40 - 20 + 1)) + 30}px`,
           animationDuration: `${(Math.random() * (10 - 8 + 1) + 8).toFixed(1)}s`
         }}
       />
