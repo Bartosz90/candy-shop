@@ -125,6 +125,7 @@ class Products extends Component {
           checkoutClicked={this.state.checkoutClicked}
           handleChoeckout={this.handleCheckout}
           cartIconTrigger={this.props.cartIconTrigger}
+          data-simplebar
         />
       </>
     );

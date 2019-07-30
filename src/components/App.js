@@ -77,7 +77,7 @@ class App extends Component {
       this.setState({ basket, cartIconTrigger: true });
       setTimeout(() => {
         this.setState({ cartIconTrigger: false });
-      }, 1000);
+      }, 300);
     }
   };
   handleProductRemove = e => {

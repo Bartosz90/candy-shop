@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/products.sass";
+import { Scrollbars } from "react-custom-scrollbars";
 
 const Basket = ({
   basketActive,
@@ -36,7 +37,9 @@ const Basket = ({
           Empty :(
         </h1>
       ) : (
-        <ul className="list">{cart}</ul>
+        <Scrollbars style={{ width: "350px", minHeight: "40vh" }}>
+          <ul className="list">{cart}</ul>
+        </Scrollbars>
       )}
 
       <div

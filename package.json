@@ -7,10 +7,12 @@
     "gh-pages": "^2.0.1",
     "node-sass": "^4.12.0",
     "react": "^16.8.6",
+    "react-custom-scrollbars": "^4.2.1",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
-    "react-timer-mixin": "^0.13.4"
+    "react-timer-mixin": "^0.13.4",
+    "simplebar": "^4.1.0"
   },
   "scripts": {
     "predeploy": "npm run build",
