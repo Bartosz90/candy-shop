@@ -39,7 +39,6 @@
     top: 0 
     width: 100vw 
     height: 100vh
-    padding: 200px 0
     background-color: $salmon-pink
     z-index: 1
     border: 4px solid $dark-blue
@@ -47,7 +46,7 @@
     transform: translateY(-100%)
     display: flex
     flex-direction: column
-    justify-content: space-between
+    justify-content: center
     align-items: center
     flex-wrap: wrap
     z-index: 2
@@ -68,12 +67,8 @@
         text-transform: uppercase
         color: #fff
         transition: .3s linear
-        @media (max-width: 1400px) 
-            height: 50px
-            width: 250px
-            margin: 10px 0
-        @media (max-width: 600px) 
-            height: 40px
+        @media (orientation: landscape) and (max-width: 900px)
+            height: 60px
         &:hover 
             letter-spacing: 2px
     a 
