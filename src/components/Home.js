@@ -26,13 +26,17 @@ class Home extends Component {
   //   }
   donutSentences = [
     "Hi, check out the menu above.",
-    "Hey you! Wanna buy a donut?",
+    "Hey you! Wanna buy a candy?",
     "How'r you doin?",
     "What's up, fella?",
     "How's ur day, friend?",
     "I'm hungry... need a sweet!",
     "Has anyone seen some candies?!",
-    "I need some sugar. "
+    "I need some sugar.",
+    "I hope you do like sweets!",
+    "Sweety day, isn't it?",
+    "Sweets... love all of them!",
+    "Yep, I'm a Donut. And I talk."
   ];
 
   componentDidMount() {
