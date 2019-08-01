@@ -4,6 +4,7 @@ import { Route, Switch } from "react-router-dom";
 import Home from "./Home.js";
 import Products from "./Products.js";
 import About from "./About.js";
+import Contact from "./Contact.js";
 
 // const About = () => {
 //   return (
@@ -13,13 +14,6 @@ import About from "./About.js";
 //   );
 // };
 
-const Contact = () => {
-  return (
-    <section className="aontact main-section">
-      <h1>Contact</h1>
-    </section>
-  );
-};
 const Main = ({
   animationDone,
   basket,
