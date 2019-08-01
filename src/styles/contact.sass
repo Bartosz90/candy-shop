@@ -3,12 +3,16 @@
 .main 
     .main-section.contact
         +flexCenter()
+        position: relative
+        height: 100vh
+        overflow: hidden
         .form 
             +flexCenter()
             position: relative
             width: 400px
             height: 500px
             background-color: $salmon-pink
+            box-shadow: -5px 10px 33px rgba(0,0,0,1)
             input, textarea, button 
                 width: 90%
                 padding: 10px
@@ -16,6 +20,9 @@
                 height: 10% 
             textarea 
                 height: 30%
+            input, textarea 
+                @media (min-width: 900px)
+                    font-size: 20px
             button 
                 width: 55%
                 background-color: $pink
@@ -51,7 +58,7 @@
     height: 100px
     background-size: cover 
     background-position: center
-    position: fixed
+    position: absolute
     left: 50% 
     top: 50%
     transform: translate(-50%,-50%) rotate(65deg) 
@@ -59,7 +66,7 @@
     @media (max-width: 900px)
         trnasform: rotate(65deg)
         left: 320px
-        top: 70vh
+        top: 65vh
         animation: none
     @media (max-width: 420px) 
         transform: none

@@ -102,7 +102,7 @@ class App extends Component {
               alertText={this.state.alertText}
             />
           )}
-          {this.state.welcomePageCounter < 1 && <WelcomePage />}
+          {this.state.welcomePageCounter < 7 && <WelcomePage />}
           <Nav
             active={this.state.isNavActive}
             click={this.handleMenu}
